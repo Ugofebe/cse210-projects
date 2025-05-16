@@ -3,7 +3,7 @@ using System;
 
 class Program
 {
-    static Journal journal = new Journal(); //This is more like instantiating for a class I created in another cs file for use in this file
+    static Journal _journal = new Journal(); //This is more like instantiating for a class I created in another cs file for use in this file
 
     static void Main(string[] args)
     {
@@ -23,16 +23,16 @@ class Program
             switch (input)
             {
                 case "1":
-                    journal.WriteNewEntry();
+                    _journal.WriteNewEntry();
                     break;
                 case "2":
-                    journal.DisplayJournal();
+                    _journal.DisplayJournal();
                     break;
                 case "3":
-                    journal.SaveJournal();
+                    _journal.SaveJournal();
                     break;
                 case "4":
-                    journal.LoadJournal();
+                    _journal.LoadJournal();
                     break;
                 case "5":
                     return;
