@@ -14,11 +14,14 @@ public class BreathingActivity : Activity
     {
         int cycles = _duration / 6; // Each breath in/out cycle is 6 seconds
         for (int i = 0; i < cycles; i++)
-        {
+        {   // Exceeding requirements: Here I added a form of coloring to the words Breathe in and Breath out
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Breathe in...");
             ShowCountdown(3);
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Breathe out...");
             ShowCountdown(3);
+            Console.ResetColor();
         }
     }
 }
